@@ -1,0 +1,17 @@
+1. Class Access Modifier: public
+- Reason: The Book class is made public so it can be accessed from any other class in the same package or different
+packages. This is essential if you want to use this class as part of a library or in a different part of the application.
+2. Attributes Access Modifier: private
+- Reason: The attributes (title, author, price) are kept private to encapsulate the data and prevent direct access from
+outside the class. This helps in maintaining control over the data, ensuring it can only be modified through defined
+methods (setters).
+3. Constructors Access Modifier: public
+- Reason: Constructors are made public to allow objects of the Book class to be instantiated from outside the class. If
+constructors were private, you wouldn't be able to create instances of Book in other classes.
+4. Getters and Setters Access Modifier: public
+- Reason: Getters and setters are made public to provide controlled access to the private attributes. They allow reading
+and updating the attribute values while maintaining encapsulation. Setters can also include validation logic to ensure
+the integrity of the data.
+5. Methods (displayDetails and applyDiscount) Access Modifier: public
+- Reason: The methods displayDetails and applyDiscount are made public to allow them to be invoked from outside the class.
+This makes these functionalities available to other parts of the program, promoting reuse and interaction with the Book objects.
