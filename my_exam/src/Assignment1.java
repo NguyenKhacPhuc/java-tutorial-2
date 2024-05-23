@@ -20,19 +20,16 @@ public class Assignment1 {
             }
 
             System.out.println("Original Array:");
-            for (int i = 0; i < mL; i++) {
-                System.out.print(myArray[i] + " ");
+            for (int j : myArray) {
+                System.out.print(j + " ");
             }
 
             System.out.println();
             System.out.println(k + " largest elements of the said array are:");
-            int count = 0;
             Arrays.sort(myArray);
-            for (int i = mL - 1; i >= 0; i--) {
-                if (count < k) {
+            for (int i = mL - 1; i >= (mL - k); i--) {
                     System.out.print(myArray[i] + " ");
-                    count++;
-                }
+
             }
 
 

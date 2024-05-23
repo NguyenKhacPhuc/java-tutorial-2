@@ -18,21 +18,20 @@ public class Assignment5 {
         float e = sc.nextFloat();
         System.out.println("Input f: ");
         float f = sc.nextFloat();
+        float D = a * e - d * b;
+        float Dx = c * e - f * b;
+        float Dy = a * f - d * c;
 
-        float D = a * e - b * d;
         System.out.println("Result of D = a*e - b*d = " + D);
-        if (D != 0) {
-            System.out.println("The system has a unique solution, which can be computed as ");
-            float x = (c * e - b * f) / (a * e - b * d);
-            float y = (a * f - c * d) / (a * e - b * d);
-            System.out.println("The x and y results of the ");
-            System.out.println(a + "x+" + b + "y=" + c);
-            System.out.println(d + "x+" + e + "y=" + f);
-            System.out.printf("x = " + "%.2f", x);
-            System.out.println();
-            System.out.printf("y = " + "%.2f", y);
+        if (D == 0) {
+            if (Dx == 0)
+                System.out.println("Countless solutions");
+            else
+                System.out.println("No solution");
         } else {
-            System.out.println("The system may either have no solution or infinitely many solutions");
+            double x = (double) Dx / (double) D;
+            double y = (double) Dy / (double) D;
+            System.out.printf("%.2f %.2f", x, y);
         }
 
     }

@@ -19,9 +19,9 @@ public class Assignment2 {
         }
 
         System.out.println("Original Array:");
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                System.out.print(anInt + " ");
+        for (int[] row : matrix) {
+            for (int element : row) {
+                System.out.print(element + " ");
             }
             System.out.println();
         }
