@@ -5,9 +5,9 @@ public class Book {
     private double price;
 
     public Book() {
-        this.title = "De men phuu luu ki";
-        this.author = "To Hoai";
-        this.price = 1200;
+        title = "De men phuu luu ki";
+        author = "To Hoai";
+        price = 1200;
         bookCount++;
     }
 
@@ -34,7 +34,11 @@ public class Book {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if(title != null && title.matches("^[a-zA-Z0-9 ]*$") && title.equals(title.trim())){
+            this.title = title;
+        }else {
+            System.out.println("Invalid");
+        }
     }
 
     public String getAuthor() {
@@ -42,7 +46,11 @@ public class Book {
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        if(author != null && author.matches("^[a-zA-Z0-9 ]*$") && author.equals(author.trim())){
+            this.author = author;
+        }else {
+            System.out.println("Invalid");
+        }
     }
 
     public double getPrice() {
@@ -50,7 +58,11 @@ public class Book {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if(price > 0) {
+            this.price = price;
+        }else {
+            System.out.println("Invalid");
+        }
     }
 
     public void displayDetails() {
@@ -58,6 +70,10 @@ public class Book {
     }
 
     public double applyDiscount(double percentage) {
-        return price * (percentage / 100);
+        if(percentage > 0 && percentage <= 100){
+            return price * (percentage / 100);
+        }else {
+            return price;
+        }
     }
 }
