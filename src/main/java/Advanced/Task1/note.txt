@@ -1,0 +1,16 @@
+
+DEEP COPY CONSTRUCTOR
+1) Là gì ?
+- Deep Copy Constructor tạo bản sao sâu của đối tượng, sao chép cả các đối tượng mà nó tham chiếu đến.
+
+2) Khi nào dùng ?
+- Khi cần sao chép đối tượng hoàn toàn độc lập.
+- Khi đối tượng chứa các tham chiếu đến các đối tượng khác.
+
+3) Dùng như thế nào ?
+- Tạo constructor nhận đối tượng cùng lớp.
+- Sao chép tất cả thuộc tính, kể cả các đối tượng tham chiếu đệ quy.
+
+4) Vì sao dùng ?
+- Đảm bảo đối tượng sao chép độc lập, không ảnh hưởng lẫn nhau.
+- Tránh lỗi do chia sẻ tham chiếu.

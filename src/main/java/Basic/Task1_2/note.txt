@@ -1,0 +1,54 @@
+1) hàm matches()
+ a) Là gì            : Được sử dụng để kiểm tra xem một chuỗi có khớp với một biểu thức chính quy (regular expression) hay không.
+ b) Khi nào dùng     : Dùng khi bạn cần kiểm tra xem một chuỗi có khớp với một mẫu biểu thức chính quy hay không.
+ c) Dùng như thế nào :
+                       ex: String text = "example";
+                           boolean result = text.matches("ex.*le"); // Sử dụng biểu thức chính quy
+                           System.out.println(result); // true nếu text khớp với regex, ngược lại là false
+- Tại sao dùng       : +) Kiểm tra định dạng chuỗi: Kiểm tra định dạng email, số điện thoại, mã bưu điện, v.v.
+                       +) Xác thực dữ liệu: Đảm bảo dữ liệu đầu vào của người dùng khớp với mẫu mong muốn.
+                       +) Tìm kiếm và xử lý văn bản: Áp dụng biểu thức chính quy để tìm và thao tác trên các phần tử của văn bản.
+
+2) hàm equals()
+ a) Là gì            : Được sử dụng để so sánh nội dung của hai đối tượng để xác định xem chúng có bằng nhau không.
+ b) Khi nào dùng     : Dùng khi cần so sánh nội dung của hai đối tượng, thay vì so sánh địa chỉ bộ nhớ của chúng.
+ c) Dùng như thế nào :
+                       ex: String str1 = "hello";
+                           String str2 = "hello";
+                           boolean result = str1.equals(str2); // So sánh nội dung của str1 và str2
+                           System.out.println(result); // true nếu nội dung của str1 và str2 giống nhau, ngược lại là false
+ d) Tại sao dùng     : +) So sánh giá trị thực: Để so sánh giá trị thực của các đối tượng thay vì so sánh địa chỉ bộ nhớ.
+                       +) Đảm bảo tính nhất quán trong so sánh: Giúp tránh những lỗi tiềm tàng khi so sánh đối tượng bằng toán tử ==,
+                       vốn chỉ so sánh địa chỉ bộ nhớ.
+
+3)  `^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,}$`
+ a. Ký tự bắt đầu: ^
+ - ^ là ký tự neo đầu dòng trong biểu thức chính quy, nó cho biết rằng chuỗi phải bắt đầu khớp từ đầu.
+
+ b. [A-Za-z0-9]+
+ - [A-Za-z0-9] là một tập hợp các ký tự cho phép, bao gồm:
+ - A-Z: tất cả các chữ cái viết hoa từ A đến Z.
+ - a-z: tất cả các chữ cái viết thường từ a đến z.
+ - 0-9: tất cả các chữ số từ 0 đến 9.
+ - Dấu + đứng ngay sau tập hợp này có nghĩa là "một hoặc nhiều lần". Điều này có nghĩa là phần đầu tiên của email (trước ký tự @) phải
+ chứa ít nhất một ký tự trong tập hợp cho phép này và có thể có nhiều ký tự.
+
+ c. Ký tự @
+ - @ là ký tự bắt buộc phải có trong một địa chỉ email hợp lệ. Nó phân tách phần tên người dùng và phần tên miền trong địa chỉ email.
+
+ d. [A-Za-z0-9]+
+ - [A-Za-z0-9]+ ở đây tương tự như phần trước ký tự @, yêu cầu phần tên miền của email (sau ký tự @) cũng phải chứa ít nhất một ký tự và
+ các ký tự này phải thuộc tập hợp các chữ cái và số đã liệt kê.
+
+ e. Ký tự \\. hoặc .
+ - \\. hoặc . là dấu chấm thực tế trong biểu thức chính quy. Trong Java, bạn cần sử dụng \\. để biểu diễn dấu chấm vì dấu chấm . trong
+ biểu thức chính quy thông thường có nghĩa là "bất kỳ ký tự nào".
+ - Dấu chấm này phân tách phần tên miền chính với phần mở rộng miền (ví dụ: .com, .org, .net).
+
+ f. [A-Za-z]{2,}
+ - [A-Za-z] là một tập hợp các ký tự cho phép, bao gồm tất cả các chữ cái viết hoa từ A đến Z và các chữ cái viết thường từ a đến z.
+ - {2,} là một cú pháp định lượng trong biểu thức chính quy, có nghĩa là "ít nhất 2 lần". Điều này yêu cầu phần mở rộng của tên miền phải
+ chứa ít nhất 2 ký tự chữ cái.
+
+ g. Ký tự kết thúc: $
+ - $ là ký tự neo cuối dòng trong biểu thức chính quy, nó cho biết rằng chuỗi phải kết thúc ngay sau phần mở rộng miền.
