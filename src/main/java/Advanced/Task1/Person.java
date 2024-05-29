@@ -4,7 +4,6 @@ public class Person {
     private String name;
     private int age;
 
-    // Constructor
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -15,6 +14,8 @@ public class Person {
         this.name = new String(other.name); // Deep copy for the name field
         this.age = other.age; // Primitive types like int are copied directly
     }
+//    Chuỗi name: Tạo một đối tượng String mới để đảm bảo sao chép sâu. Điều này đảm bảo rằng bất kỳ thay đổi nào đối với
+//    tên của đối tượng sao chép sẽ không ảnh hưởng đến tên của đối tượng gốc và ngược lại.
 
     // Getter for name
     public String getName() {

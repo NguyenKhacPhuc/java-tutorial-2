@@ -9,6 +9,8 @@ import Basic.Task4.Shape;
 import Basic.Task5.Student;
 import Basic.Task6.SavingsAccount;
 import Basic.Task7.EBook;
+import Basic.Task8.Book;
+import Basic.Task8.Library;
 import Basic.Task9.Developer;
 import Basic.Task9.Manager;
 
@@ -26,7 +28,7 @@ public class main {
             case 5 -> task5();
             case 6 -> task6();
             case 7 -> task7();
-//            case 8 -> task8();
+            case 8 -> task8();
             case 9 -> task9();
             case 10 -> task10();
             default -> System.out.println("Invalid");
@@ -68,6 +70,22 @@ public class main {
     public static void task7() {
         EBook myEBook = new EBook("Ha Noi va Em", "Vu Thi Huong", 10.5F);
         System.out.println(myEBook);
+    }
+
+    public static void task8() {
+        Library library = new Library();
+        Book book1 = new Book("De men phuu luu ki", "To Hoai", "A01", 2500);
+        Book book2 = new Book("Hat gao lang ta", "Tran Dang Khoa", "A02", 3500);
+
+        library.addBook(book1);
+        library.addBook(book2);
+
+        library.removeBook("A01");
+
+        for (Book book : library.listBooks()) {
+            System.out.println(book);
+        }
+
     }
 
     public static void task9() {

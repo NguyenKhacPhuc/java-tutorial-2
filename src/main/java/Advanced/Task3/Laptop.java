@@ -3,18 +3,19 @@ package Advanced.Task3;
 public class Laptop extends Computer {
     private int batteryLife;
 
-    // Constructor
     public Laptop(String brand, String model, String processor, int batteryLife) {
-        super(brand, model, processor); // Call the constructor of the Computer class
+        super(brand, model, processor);
         this.batteryLife = batteryLife;
     }
 
-    // Getter for batteryLife
     public int getBatteryLife() {
         return batteryLife;
     }
 
-    // Override toString method for easy printing
+    public void setBatteryLife(int batteryLife) {
+        this.batteryLife = batteryLife;
+    }
+
     @Override
     public String toString() {
         return "Laptop{" +
@@ -23,7 +24,5 @@ public class Laptop extends Computer {
                 "processor='" + getProcessor() + "', " +
                 "batteryLife=" + batteryLife + " hours}";
     }
-
-    // Main method for testing
 }
 

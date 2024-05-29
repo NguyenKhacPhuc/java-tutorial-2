@@ -1,0 +1,30 @@
+
+
+1) Encapsulation with Immutable Classes là một phong cách thiết kế trong lập trình hướng đối tượng trong đó các đối
+tượng  được thiết kế sao cho không thể thay đổi trạng thái của chúng sau khi được tạo. Trạng thái của một đối tượng
+immutable không thể được thay đổi bởi các phương thức công khai, mà thay vào đó, mọi thay đổi cần thiết phải được thực
+hiện thông qua việc tạo ra một bản sao mới của đối tượng.
+
+2) Khi nào dùng Immutable Classes?
+. Khi cần đảm bảo tính nhất quán và an toàn: Sử dụng immutable classes giúp tránh các vấn đề liên quan đến đa luồng
+(multithreading) và race conditions.
+. Khi cần sử dụng caching: Immutable objects có thể được cache và sử dụng lại mà không cần phải lo lắng về việc thay đổi
+giá trị.
+. Khi muốn ngăn chặn thay đổi không mong muốn: Bằng cách không cho phép thay đổi trạng thái của đối tượng sau khi tạo,
+ta
+có thể chắc chắn rằng các phần của chương trình không làm hỏng hoặc thay đổi không mong muốn đối tượng.
+
+3) Cách dùng Immutable Classes?
+. Thiết kế các lớp sao cho các trường (fields) là final và không có setter method: Điều này đảm bảo rằng giá trị của
+các  trường không thể được thay đổi sau khi đối tượng được tạo.
+. Cung cấp các constructor hoặc static factory methods để khởi tạo đối tượng với giá trị ban đầu: Những phương thức này
+cần tạo ra một bản sao mới của đối tượng thay vì chỉ đơn giản gán giá trị.
+. Tránh trả về các tham chiếu đến các mutable objects từ các phương thức công khai: Nếu cần trả về một đối tượng bên
+trong  immutable object, hãy đảm bảo rằng đối tượng được trả về là immutable hoặc một bản sao của nó.
+
+4) Tại sao dùng Immutable Classes?
+. An toàn trong multithreading: Immutable objects có thể chia sẻ an toàn giữa các luồng mà không cần đồng bộ hóa bởi vì
+không thể thay đổi.
+. Dễ bảo trì và debug: Immutable objects thường dễ hiểu và dễ bảo trì hơn vì chúng không thay đổi trạng thái.
+. Giảm nguy cơ lỗi: Bằng cách ngăn chặn thay đổi trạng thái, ta giảm được khả năng gặp phải các lỗi không mong muốn liên
+quan đến trạng thái của đối tượng.

@@ -1,0 +1,111 @@
+LIST
+1) List là gì ?
+- List là một giao diện (interface) thuộc gói java.util. Nó đại diện cho một collection có thứ
+tự (ordered collection) và cho phép các phần tử trùng lặp.
+
+2) Khi nào dùng ?
+- Khi cần một collection mà thứ tự của các phần tử quan trọng.
+- Khi cần lưu trữ các phần tử trùng lặp.
+- Khi cần truy cập phần tử bằng chỉ số (index).
+
+3) Cách dùng ?
+ ex:
+    // Khởi tạo một List sử dụng ArrayList
+    List<String> list = new ArrayList<>();
+
+    // Thêm phần tử vào List
+    list.add("Apple");
+    list.add("Banana");
+    list.add("Cherry");
+
+    // Truy cập phần tử bằng chỉ số
+    System.out.println("Phần tử đầu tiên: " + list.get(0)); // Output: Phần tử đầu tiên: Apple
+
+    // Duyệt qua các phần tử trong List
+    for (String fruit : list) {
+       System.out.println(fruit);
+    }
+
+    // Xóa phần tử khỏi List
+    list.remove("Banana");
+
+    // Kích thước của List
+    System.out.println("Kích thước của List: " + list.size()); // Output: Kích thước của List: 2
+
+4) Lý do dùng ?
+- Thao tác dễ dàng: List cung cấp các phương thức hữu ích như add, remove, get, và size để quản
+lý collection.
+- Độ linh hoạt: List có nhiều triển khai khác nhau như ArrayList, LinkedList, cho phép bạn chọn lựa
+kiểu phù hợp nhất với nhu cầu cụ thể.
+- Duyệt qua dễ dàng: Bạn có thể duyệt qua các phần tử của List một cách dễ dàng bằng vòng lặp for-each.
+
+
+
+ARRAY LIST
+1) ArrayList là gì ?
+- Là một lớp thuộc gói `java.util` dùng để tạo ra một mảng động có thể thay đổi kích thước.
+
+2) Khi nào dùng ?
+- Khi cần một động có thay đổi kích thước(Thêm/xóa một phần tử một cách linh hoạt).
+- Khi cần truy cập ngẫu nhiên vào các phần tử (chỉ số).
+
+3) Cách dùng ?
+  ex:
+    //Khai báo
+    ArrayList<Type> arrayList = new ArrayList<>();
+
+    //Thêm phần tử
+    arrayList.add(element);  // Thêm vào cuối
+    arrayList.add(index, element);  // Thêm vào vị trí chỉ định
+
+    //Truy cập phần tử
+    Type element = arrayList.get(index);
+
+    //Cập nhật phần tử
+    arrayList.set(index, element);
+
+    //Xóa phần tử
+    arrayList.remove(index);  // Xóa theo chỉ số
+    arrayList.remove(Object o);  // Xóa theo đối tượng
+
+    //Kích thước và kiểm tra trống
+    int size = arrayList.size();
+    boolean isEmpty = arrayList.isEmpty();
+
+    //Kiểm tra sự tồn tại của phần tử
+    boolean contains = arrayList.contains(element);
+
+4) Tại sao phải dùng ?
+- Linh hoạt: ArrayList có thể tự động thay đổi kích thước khi thêm hoặc xóa phần tử.
+- Truy cập nhanh: Truy cập phần tử bằng chỉ số có thời gian trung bình là O(1).
+- Thư viện phong phú: ArrayList đi kèm với nhiều phương thức hữu ích giúp thao tác với danh sách dễ dàng hơn
+
+
+LIST VÀ ARRAY
++) Array
+. Kích thước cố định: Kích thước phải được xác định khi tạo và không thể thay đổi.
+. Không hỗ trợ các phương thức tiện ích: Không có các phương thức như add, remove, contains.
+. Hiệu suất cao hơn: Thích hợp cho các mảng có kích thước cố định và khi hiệu suất là yếu tố quan trọng.
+
++) List
+. Kích thước động: Có thể thay đổi kích thước linh hoạt khi thêm hoặc xóa phần tử.
+. Hỗ trợ các phương thức tiện ích: Có nhiều phương thức như add, remove, contains, size.
+. Dễ sử dụng: Dễ thao tác và quản lý hơn nhờ các phương thức được cung cấp.
+
+=> Khi nào dùng List thay vì Array?
+Khi bạn cần một collection có kích thước thay đổi.
+Khi bạn cần các phương thức tiện ích để quản lý collection dễ dàng hơn.
+Khi bạn muốn code dễ đọc và bảo trì hơn.
+
+
+
+LIST VÀ ARRAYLIST
++) Khi nào dùng List
+. Khi cần sử dụng tính đa hình (polymorphism) để dễ dàng thay đổi giữa các triển khai khác nhau của List như
+ArrayList, LinkedList, v.v.
+. Khi viết API hoặc phương thức mà không cần biết cụ thể triển khai nào của List được sử dụng.
+
++) Khi nào dùng ArrayList
+. Khi cần hiệu suất cao cho các thao tác truy cập theo chỉ số (O(1) cho get và set).
+. Khi thường xuyên thêm hoặc xóa phần tử ở cuối danh sách (O(1) cho add).
+. Khi cần triển khai cụ thể và biết rằng ArrayList là lựa chọn tốt nhất cho các thao tác chủ yếu của bạn.
