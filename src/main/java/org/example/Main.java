@@ -30,13 +30,13 @@ public class Main {
                 excercice7();
                 break;
             case 8:
-                excercice4();
+                excercice8();
                 break;
             case 9:
-                excercice4();
+                excercice9();
                 break;
             case 10:
-                excercice4();
+                excercice10();
                 break;
             default:
                 System.out.println("Dont have number of task");
@@ -53,8 +53,13 @@ public class Main {
     }
 
     public static void excercice2() {
-        Person person2 = new Person("Anh", 21, "da9x260@gmail.com");
+
+        Person person2 = new Person();
+        person2.setName("Anh");
+        person2.setAge(21);
+        person2.setEmail("ndagmail.com");
         person2.displayPersonDetail();
+
         System.out.println(person2.getEmail());
     }
 
@@ -89,6 +94,53 @@ public class Main {
     public static void excercice7() {
         EBook ebook = new EBook("Java OPP","Cong",100);
         ebook.displayEBookDetails();
+    }
+
+
+
+    public static void excercice8() {
+        Library library = new Library();
+        Book book1 = new Book("Java OPP", "MrCong");
+        Book book2 = new Book("Java Basic", "Mr.Phuc");
+
+        library.addBook(book1);
+        library.addBook(book2);
+
+        System.out.println("Books in the library:");
+        for (Book book : library.listBooks()) {
+            System.out.println(book);
+        }
+
+        library.removeBook(book1);
+
+        System.out.println("\nBooks in the library after removal:");
+        for (Book book : library.listBooks()) {
+            System.out.println(book);
+        }
+    }
+
+    public static void excercice9() {
+        Employee manager = new Manager();
+        Employee developer = new Developer();
+
+        manager.work();
+        developer.work();
+    }
+
+    public static void excercice10() {
+        Building building1 = new Building();
+        Building building2 = new Building(2,4);
+
+        House house1 = new House();
+        House house2 = new House(2, 3);
+
+        System.out.println("Building :");
+        building1.displayDetail();
+        building2.displayDetail();
+
+        System.out.println("House :");
+        house1.displayDetail();
+        house2.displayDetail();
     }
 
 

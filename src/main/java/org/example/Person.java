@@ -42,12 +42,9 @@ public class Person {
     }
 
     public void setEmail(String email) {
-        if (email != null && email.contains("@")) {
+        if (email != null && email.contains("@"))
             this.email = email;
-        } else {
-            System.out.println("the email must contains an @ character");
-            return;
-        }
+
     }
 
     public void displayPersonDetail() {
