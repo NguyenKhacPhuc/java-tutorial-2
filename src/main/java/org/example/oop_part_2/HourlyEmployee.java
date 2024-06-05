@@ -1,3 +1,5 @@
+package org.example.oop_part_2;
+
 public class HourlyEmployee extends SalariedEmployee {
     private double hourlyEmployee;
     private double hourWorked;

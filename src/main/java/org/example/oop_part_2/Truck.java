@@ -1,3 +1,4 @@
+package org.example.oop_part_2;
 public class Truck extends Vehicle {
     private double capacity;
 

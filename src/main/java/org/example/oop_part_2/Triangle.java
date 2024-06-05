@@ -1,3 +1,4 @@
+package org.example.oop_part_2;
 public class Triangle extends Shape {
     private double base;
     private double height;

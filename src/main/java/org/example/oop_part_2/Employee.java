@@ -1,3 +1,5 @@
+package org.example.oop_part_2;
+
 public abstract class Employee {
     public String employeeId;
 

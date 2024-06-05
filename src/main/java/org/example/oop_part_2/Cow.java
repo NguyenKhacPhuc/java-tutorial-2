@@ -1,3 +1,5 @@
+package org.example.oop_part_2;
+
 public class Cow extends Animal{
     public void makeSound()
     {

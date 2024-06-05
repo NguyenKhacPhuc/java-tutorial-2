@@ -1,4 +1,4 @@
-
+package org.example.oop_part_2;
 public class SalariedEmployee extends Employee{
 
     private double monthSalary;

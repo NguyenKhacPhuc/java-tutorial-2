@@ -1,3 +1,4 @@
+package org.example.oop_part_2;
 public abstract class Vehicle {
     private String make;
     private String model;

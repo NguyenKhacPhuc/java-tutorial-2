@@ -1,3 +1,5 @@
+package org.example.oop_part_2;
+
 public  class BankTransfer extends PaymentMethod{
     private String accountNumber;
     private String routingNumber;

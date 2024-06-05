@@ -1,3 +1,4 @@
+package org.example.oop_part_2;
 public class Motorcycle extends Vehicle{
     private String engineSize;
     public Motorcycle(String make, String model, String rendalRate, String engineSize)
