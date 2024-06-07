@@ -1,4 +1,5 @@
 package org.example.oop_part_2;
+
 public abstract class Vehicle {
     private String make;
     private String model;
@@ -45,5 +46,6 @@ public abstract class Vehicle {
             System.out.println("Invalid rental rate");
         }
     }
-    public abstract void calculateRentalCost(int days); 
+
+    public abstract void calculateRentalCost(int days);
 }
