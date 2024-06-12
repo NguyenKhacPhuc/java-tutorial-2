@@ -1,6 +1,6 @@
 package org.example.exercise1;
 
-public class Manager extends Employee{
+public class Manager extends Employee {
     private String domain;
     private String hasBaseTech;
 
@@ -28,16 +28,26 @@ public class Manager extends Employee{
 
     @Override
     public void joinDailyMeeting() {
-
+        System.out.println(getName() + "join daily meeting");
     }
 
     @Override
     public void takeARest() {
-
+        System.out.println("take a rest");
     }
 
     @Override
     public void goHome() {
-
+        System.out.println("go home");
     }
+
+    public void manager() {
+        System.out.println(getName() + " still manager");
+    }
+
+    public void holdMeeting() {
+        System.out.println(" the meeting is still in running");
+    }
+
+    ;
 }

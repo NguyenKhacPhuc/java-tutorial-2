@@ -28,16 +28,30 @@ public class Developer extends Employee {
 
     @Override
     public void joinDailyMeeting() {
-
+        System.out.println(getName() + "join daily meeting");
     }
 
     @Override
     public void takeARest() {
-
+        System.out.println("take a rest");
     }
 
     @Override
     public void goHome() {
+        System.out.println("go home");
+    }
 
+    public void code(boolean bug) {
+        if (bug) {
+            System.out.println("Code and done");
+            debug();
+        } else {
+            System.out.println("Code have bug");
+            debug();
+        }
+    }
+
+    public void debug() {
+        System.out.println("Fix bug and done");
     }
 }

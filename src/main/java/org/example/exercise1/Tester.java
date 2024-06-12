@@ -1,6 +1,6 @@
 package org.example.exercise1;
 
-public class Tester extends Employee{
+public class Tester extends Employee {
     private String skills;
     private String level;
 
@@ -28,16 +28,28 @@ public class Tester extends Employee{
 
     @Override
     public void joinDailyMeeting() {
-
+        System.out.println(getName() + "join daily meeting");
     }
 
     @Override
     public void takeARest() {
-
+        System.out.println("take a rest");
     }
 
     @Override
     public void goHome() {
-
+        System.out.println("go home");
     }
+
+    public void test() {
+        System.out.println("Test dev's code");
+    }
+
+    ;
+
+    public void writeDocument() {
+        System.out.println("Have error in this line");
+    }
+
+    ;
 }

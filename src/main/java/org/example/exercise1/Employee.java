@@ -8,7 +8,7 @@ public abstract class Employee {
     public Employee(int yearOfExperiences, String name, String gender) {
         this.yearOfExperiences = yearOfExperiences;
         this.name = name;
-        this.gender = gender;
+        setGender(this.gender);
     }
 
     public int getYearOfExperiences() {
@@ -32,7 +32,12 @@ public abstract class Employee {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        if (this.gender.equals("male") || this.gender.equals("Male")) {
+            this.gender = "Male";
+        } else if (this.gender.equals("female") || this.gender.equals("Female")) {
+            this.gender = "Female";
+        }
+        System.out.println("Invalid gender");
     }
 
     public abstract void joinDailyMeeting();
