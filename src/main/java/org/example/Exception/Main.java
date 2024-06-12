@@ -1,6 +1,7 @@
 package org.example.Exception;
 import org.example.Exception.Ex1.*;
 import org.example.Exception.Ex2.*;
+import org.example.Exception.Ex3.*;
 ;
 
 
