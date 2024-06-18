@@ -1,2 +1,4 @@
 rootProject.name = 'java-tutorial-2'
+include 'src:main:java2'
+findProject(':src:main:java2')?.name = 'java2'
 
