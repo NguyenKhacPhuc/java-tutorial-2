@@ -1,23 +1,27 @@
 package org.example.EX;
 
-import java.sql.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class exer {
+
+    //Create
+    //Create new record of table in database
+
+    //Select ( Read )
+    // Read all data or filtered data
+    // Read record where name =
+
+    //Update
+    //Update owner name of record id = 3
+
+    //delete
     public static void main(String[] args){
         try{
             String DB_URL = "jdbc:mysql://localhost:3306/schema1";
-            String PASSWORD = "07072003";
+            String PASSWORD = "phuc1213";
             String USER_NAME = "root";
             Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
-            Statement statement = conn.createStatement();
-            ResultSet result = statement.executeQuery("SELECT * FROM cats");
-
-            while (result.next()) {
-                System.out.println(result.getInt("id") + " " + result.getString("name") + " " + result.getInt("age"));
-            }
+            updateCatData(conn, new Cat(3, "Nam", "Duowng", "2023"));
         }
         catch(Exception e)
         {
@@ -37,4 +41,26 @@ public class exer {
         }
         return conn;
     }
+
+    public static void updateCatData(Connection conn, Cat cat) throws SQLException {
+        PreparedStatement statement = conn.prepareStatement("UPDATE cats" +
+                " SET id = " + cat.id + ",name =?" +
+                " WHERE id=" + cat.id + ";");
+        statement.setString(1, cat.name);
+        statement.executeUpdate();
+    }
+}
+class Cat {
+    final int id;
+    final String name;
+
+    public Cat(int id, String name, String owner, String birth) {
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+        this.birth = birth;
+    }
+
+    final String owner;
+    final String birth;
 }
